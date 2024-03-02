@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: #00d1f7; 
+    --formBackgrounColor: #161822;
+    --asideBackgroundColor: #1D263E;
+
+    --font: "Segoe UI";
+}
+
+main{
+    display: flex;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vmin;
+    background-color: var(--formBackgrounColor);
+    background-image: url(/src/assets/waves.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vmin;
+    background-color: var(--asideBackgroundColor);
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h2{
+    font: 500 2.3em var(--font);
+    color: white;
+    margin-bottom: 25px;
+}
+
+form input{
+    width: max(20vw, 350px);
+    padding: 10px;
+    border: none;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font: normal 1em var(--font);
+}
+
+form input:focus{
+    border: none;
+    outline: 2px solid var(--primaryColor);
+}
+
+#name{
+    background-image: url(/src/images/perfil.webp);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-indent: 35px;
+}
+
+#e-mail{
+    background-image: url(/src/images/email.webp);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-indent: 35px;
+}
+
+.errorMsg{
+    display: flex;
+}
+
+.errorMsg img{
+    height: 20px;
+    margin-right: 8px;
+}
+
+.error{
+    font: normal 0.8em var(--font);
+    color: red;
+    position: relative;
+    bottom: 15px;
+}
+
+.input-error{
+    outline: 2px solid red;
+}
+
+form label{
+    display: none;
+}
+
+form button{
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    font: 500 1em var(--font);
+    background-color: var(--asideBackgroundColor);
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover{
+    background-color: var(--primaryColor);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button img{
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+aside img{
+    height: 150px;
+    margin-bottom: max(10px, 5px);
+}
+
+aside h1{
+    color: white;
+    font: 500 2em var(--font);
+    margin-bottom: max(15px, 10px);
+}
+
+aside p{
+    color: rgba(255, 255, 255, 0.842);
+    font: normal 1em var(--font);
+    text-align: center;
+    width: max(350px, 200px);
+}
+
+a{
+    color: white;
+}
+
+.modal{
+    background-color: var(--asideBackgroundColor);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+}
+
+.fade-in{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.modal img{
+    height: 180px;
+    margin-bottom: max(10px, 5px);
+}
+
+.modal h1{
+    color: #ffffff;
+    font: 500 2em var(--font);
+    margin-bottom: max(15px, 10px);
+}
+
+.modal p{
+    color: rgba(255, 255, 255, 0.842);
+    font: normal 1.1em var(--font);
+    text-align: center;
+    width: max(350px, 200px);
+    margin-bottom: 8px;
+}
+
+.visible{
+    animation: expand 0.5s linear forwards;
+    display: flex;
+    visibility: visible;
+    height: 100vh;
+}
+
+@keyframes expand {
+    0%{
+        right: 0;
+        width: 0%;
+    }
+
+    100%{
+        right: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    aside{
+        display: none;
+    }
+
+    form{
+        height: 100vh;
+        width: 100%;
+        background-image: url();
+    }
+}
