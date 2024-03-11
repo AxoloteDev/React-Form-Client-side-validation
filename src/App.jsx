@@ -36,16 +36,16 @@ function Form(){
     if(emailVerification){
       switch(true){
         case input.trim().length === 0:
-          setEmailError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>O campo não pode estar em branco</p></div>);
+          setEmailError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>O campo não pode estar em branco</p></div>);
           break;
         case /\s/.test(input):
-          setEmailError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>Não pode conter espaços</p></div>);
+          setEmailError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>Não pode conter espaços</p></div>);
           break;
         case !/@/.test(input):
-          setEmailError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>Precisa conter @</p></div>);
+          setEmailError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>Precisa conter @</p></div>);
           break;
           case !/\./.test(input):
-            setEmailError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>Precisa conter .com ou semelhantes</p></div>);
+            setEmailError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>Precisa conter .com ou semelhantes</p></div>);
             break;
         default:
           setEmailError(null);
@@ -59,7 +59,7 @@ function Form(){
   function nameValidation(input){
     if(nameVerificarion && input.trim().length === 0){
       console.log("Error no nome");
-      setNameError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>O campo não pode estar em branco</p></div>)
+      setNameError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>O campo não pode estar em branco</p></div>)
     } else{
       setNameError("");
     }
@@ -70,7 +70,7 @@ function Form(){
     nameValidation(name);
         
     if(name.trim().length === 0){
-        setNameError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>Preencha o campo novamente</p></div>);
+        setNameError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>Preencha o campo novamente</p></div>);
     } else{
         submitForm();
     }
@@ -93,7 +93,7 @@ function Form(){
 
       } else{
         console.log("Error");
-        setEmailError(<div className='errorMsg'><img src='/src/images/x.webp'/><p>Preencha o campo corretamente</p></div>);
+        setEmailError(<div className='errorMsg'><img src='./src/images/x.webp'/><p>Preencha o campo corretamente</p></div>);
         setIsSubmitting(false);
         setIsLoading(false);
       }
